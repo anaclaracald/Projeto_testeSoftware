@@ -78,7 +78,7 @@ app.put("/usuarios/:id", async (req, res) => {
         const { nome, email, senha } = req.body
         const userRef = usuariosCollection.doc(req.params.id)
         await userRef.update({ nome, email, senha })
-        res.json({ message: "User updated successfully." })
+        res.json({ message: "User updated successfully."})
     }
     catch (error) {
         res.status(500).json({ error: error.message })
