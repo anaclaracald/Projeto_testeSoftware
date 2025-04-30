@@ -37,8 +37,9 @@ A solução proposta é um cardápio digital que oferece:
 
 | Camada         | Ferramentas                                      |
 |----------------|--------------------------------------------------|
-| **Front-end**  | HTML, CSS, JavaScript, Bootstrap                 |
+| **Front-end**  | HTML, CSS, JavaScript               |
 | **Back-end**   | Node, Express                                         |
+| **Testes**     | Jest|
 | **Banco de Dados** | Firebase                          |
 | **Prototipação** | Figma                                         |
 | **Gerenciamento** | Trello                                       |
