@@ -141,7 +141,7 @@ Agradecemos a contribuição de todos os autores e orientadores do projeto.
 - Ana Clara Ferreira Caldeira – UC24101888
 - Bárbara Marques Dantas – UC24101492
 - Bruno Matias Santana – UC24103220
-- Guilherme 
+- Guilherme Almeida - UC24102391
 
 ---
 
@@ -153,7 +153,7 @@ Agradecemos a contribuição de todos os autores e orientadores do projeto.
 | Gerenciamento de Projeto| Organização das entregas e prazos                    | Alice           |
 | Desenvolvimento (Front) | Implementação da interface e testes                  | Bruno           |
 | Desenvolvimento (Back)  | Lógica de negócios e integração                      | Ana Clara       |
-|                         |                                                      | Guilherme       |
+| Analíse e Projeto       | Definição e realização de requisitos do sistema      | Guilherme       |
 
 ---
 
