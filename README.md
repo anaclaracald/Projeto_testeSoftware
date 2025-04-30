@@ -115,6 +115,8 @@ A solução proposta é um cardápio digital que oferece:
 - **Diagrama de Classes:** Apresenta as entidades principais, atributos e métodos, e como se relacionam entre si.
 
 ---
+## Pré-requisito para rodar o projeto
+- Ter Javascript e node.js instalados na máquina
 
 ## Repositório
 
@@ -126,6 +128,13 @@ git clone https://github.com/anaclaracald/Projeto_testeSoftware.git
 
 ```bash 
 https://github.com/anaclaracald/Projeto_testeSoftware
+```
+
+#### Instruções para teste
+```bash
+cd backend
+npm install --save-dev jest
+npm test -- --verbose 
 ```
 
 ---
