@@ -34,3 +34,5 @@ class ClienteService {
         return this._clientes
     }
 }
+
+module.exports = ClienteService

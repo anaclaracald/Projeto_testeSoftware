@@ -35,3 +35,4 @@ class GerenteService {
     }
 }
 
+module.exports = GerenteService
