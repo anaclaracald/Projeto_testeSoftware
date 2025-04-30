@@ -61,3 +61,5 @@ class PedidoService {
         return pedido
     }
 }
+
+module.exports = PedidoService
