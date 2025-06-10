@@ -35,3 +35,5 @@ class ProdutoService {
         return produto
     }
 }
+
+module.exports = ProdutoService

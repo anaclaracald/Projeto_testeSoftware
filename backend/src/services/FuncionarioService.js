@@ -34,3 +34,5 @@ class FuncionarioService {
         return this._funcionarios
     }
 }
+
+module.exports = FuncionarioService
