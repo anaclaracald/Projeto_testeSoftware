@@ -1,8 +1,13 @@
 const express = require("express")
 const admin = require("firebase-admin")
+const cors = require("cors")
+const path = require("path");
+
 const app = express()
 
+app.use(cors());
 app.use(express.json())
+app.use(express.static(path.join(__dirname, "../../frontend")));
 
 const serviceAccount = require("./firebaseKey.json")
 
@@ -71,7 +76,7 @@ app.get("/usuarios/:id", async (req, res) => {
 
 })
 
-// // UPDATE
+// UPDATE
 app.put("/usuarios/:id", async (req, res) => {
 
     try {
@@ -86,7 +91,7 @@ app.put("/usuarios/:id", async (req, res) => {
 
 })
 
-// // DELETE
+// DELETE
 app.delete("/usuarios/:id", async (req, res) => {
 
     try {
@@ -98,6 +103,11 @@ app.delete("/usuarios/:id", async (req, res) => {
     }
 
 })
+
+// página inicial
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../frontend/index.html"));
+});
 
 // inicializar servidor
 const PORT = process.env.PORT || 3000
