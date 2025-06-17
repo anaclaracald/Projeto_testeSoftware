@@ -335,7 +335,7 @@ h2 {
   background-color: rgba(0,0,0,0.5);
 }
 
-.modal-content {
+.modal-conteudo {
   background-color: #fff;
   margin: 20% auto;
   padding: 20px;
@@ -345,7 +345,7 @@ h2 {
   border-radius: 10px;
 }
 
-.modal-buttons button {
+.modal-botoes button {
   margin: 10px;
   padding: 10px 20px;
   font-weight: bold;
@@ -354,12 +354,12 @@ h2 {
   cursor: pointer;
 }
 
-.modal-buttons button:first-child {
+.modal-botoes button:first-child {
   background-color: #d9534f;
   color: white;
 }
 
-.modal-buttons button:last-child {
+.modal-botoes button:last-child {
   background-color: #5bc0de;
   color: white;
 }
@@ -380,31 +380,31 @@ h2 {
   margin-bottom: 30px;
 }
 
-.login-form {
+.login-formulario {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.input-group {
+.input-grupo {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #000;
   padding: 8px 0;
 }
 
-.input-group .icon {
+.input-groupo .icone {
   margin-right: 10px;
 }
 
-.input-group .icon img {
+.input-groupo .icone img {
   width: 18px;   
   height: 18px;
   object-fit: contain;
 }
 
 
-.input-group input {
+.input-grupo input {
   border: none;
   outline: none;
   flex: 1;
@@ -477,18 +477,18 @@ h2 {
   margin: 0;
 }
 
-.form-mesa label {
+.formulario-mesa label {
   font-size: 14px;
   font-weight: 600;
   display: block;
   margin-bottom: 5px;
 }
 
-.form-mesa label span {
+.formulario-mesa label span {
   color: red;
 }
 
-.form-mesa input {
+.formulario-mesa input {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -498,7 +498,7 @@ h2 {
   margin-bottom: 4px;
 }
 
-.form-mesa .info {
+.formulario-mesa .info {
   font-size: 12px;
   color: #666;
   margin-bottom: 20px;
