@@ -71,7 +71,7 @@ app.post("/login", async (req, res) => {
 
         console.log("Ok 1")
 
-        const token = jwt.sign({ id: doc.id, email: userData.email }, process.env.JWT_SECRET, { expiresIn: "1h" })
+        const token = jwt.sign({ id: doc.id, email: userData.email }, "vC+dtfWWK@j?tn5CUo-t#,A,7Ufq48h9m2%Ece}}!Jh-d9.+VV4s8t)Y7MiY5?*,", { expiresIn: "1h" })
 
         console.log("Ok 2")
 
@@ -94,7 +94,7 @@ function autenticarToken(req, res, next) {
     const token = req.headers.authorization?.split(" ")[1]
     if (!token) return res.status(401).json({ message: "Token não fornecido" })
     
-    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    jwt.verify(token, "vC+dtfWWK@j?tn5CUo-t#,A,7Ufq48h9m2%Ece}}!Jh-d9.+VV4s8t)Y7MiY5?*,", (err, user) => {
         if (err) return res.status(403).json({ message: "Token inválido" })
         req.user = user
         next()
