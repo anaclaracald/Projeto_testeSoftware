@@ -4,7 +4,6 @@ const cors = require("cors")
 const path = require("path");
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
-require("dotenv").config()
 
 const app = express()
 
@@ -25,8 +24,7 @@ const usuariosCollection = db.collection("usuarios")
 app.use((req, res, next) => {
     console.log(`Received ${req.method} request for ${req.url}`);
     next();
-  });
-  
+});
 
 // cadastro
 app.post("/usuarios", async (req, res) => {
@@ -52,8 +50,6 @@ app.post("/usuarios", async (req, res) => {
 app.post("/login", async (req, res) => {
     const { email, senha } = req.body
 
-    console.log(req.body)
-
     try {
         const snapshot = await usuariosCollection.where("email", "==", email).get()
 
@@ -69,15 +65,10 @@ app.post("/login", async (req, res) => {
             return res.status(401).json({ message: "Email ou senha inválidos." })
         }
 
-        console.log("Ok 1")
-
         const token = jwt.sign({ id: doc.id, email: userData.email }, "vC+dtfWWK@j?tn5CUo-t#,A,7Ufq48h9m2%Ece}}!Jh-d9.+VV4s8t)Y7MiY5?*,", { expiresIn: "1h" })
-
-        console.log("Ok 2")
 
         res.json({ message: "Login bem-sucedido", token })
 
-        console.log("Ok 3")
     } catch (error) {
         console.error("Erro no login:", error)
         res.status(500).json({ error: error.message })

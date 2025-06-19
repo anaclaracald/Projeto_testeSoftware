@@ -18,12 +18,22 @@ document.getElementById("cadastro_form").addEventListener("submit", async (e) =>
                 body: JSON.stringify({ nome, email, senha })
             })
 
-            const dados = await resposta.json()
+            let dados
+            try {
+                dados = await resposta.json()
+            } catch {
+                const texto = await resposta.text()
+                console.error("Resposta não-JSON recebida:", texto)
+                alert("Erro inesperado: resposta do servidor inválida.")
+                return
+            }
 
             if (resposta.ok) {
                 alert("✅ Usuário cadastrado com sucesso!")
                 window.location.href = "/confirmacao-cadastro.html";
             } else {
+                console.log("Erro no login:", dados.message)
+                console.log("Status da resposta:", resposta.status)
                 alert("❌ Erro ao cadastrar usuário")
             }
 
